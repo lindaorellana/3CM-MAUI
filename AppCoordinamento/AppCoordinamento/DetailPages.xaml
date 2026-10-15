@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCoordinamento.DetailPages"
+             Title="DetailPages"
+             Loaded="ContentPage_Loaded"
+    <ScrollView>
+        <VerticalStackLayout
+          Spacing="25"
+          Padding="30,0"
+          VerticalOptions="Center">
+
+
+            <Label
+              Text="Matricola"
+              FontSize="10"
+              HorizontalOptions="Center" /> 
+            <Entry x:Name="TxtMatricola" Unfocused="TxtMatricola_Unfocused" />
+
+            <Label
+              Text="Nome"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtNome" />
+
+            <Label
+              Text="Cognome"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtCognome" />
+
+            <Label
+              Text="Media di italiano"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtITA" Unfocused="TxtITA_Unfocused" />
+
+            <Label
+              Text="Media di storia"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtSTO" Unfocused="TxtSTO_Unfocused" />
+
+            <Label
+              Text="Media di inglese"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtENG" Unfocused="TxtENG_Unfocused"/>
+
+            <Label
+              Text="Media di tedesco"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtTED" Unfocused="TxtTED_Unfocused"/>
+
+            <Label
+              Text="Media di matematica"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtMAT" Unfocused="TxtMAT_Unfocused"/>
+
+            <Label
+              Text="Media di informatica"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtINF" Unfocused="TxtINF_Unfocused"/>
+
+            <Label
+              Text="Media di economia aziendale"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtECO" Unfocused="TxtECO_Unfocused"/>
+
+            <Label
+              Text="Media di diritto"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtDIR" Unfocused="TxtDIR_Unfocused"/>
+
+            <Label
+              Text="Media di economia politica"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtECOP" Unfocused="TxtECOP_Unfocused"/>
+
+            <Label
+              Text="Media di scienze motorie"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtSCI" Unfocused="TxtSCI_Unfocused"/>
+
+            <Label
+              Text="Media di IRC"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtIRC" Unfocused="TxtIRC_Unfocused"/>
+
+            <Label
+              Text="Media di educazione civica"
+              FontSize="10"
+              HorizontalOptions="Center" />
+            <Entry x:Name="TxtECC" Unfocused="TxtECC_Unfocused"/>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button x:Name="BtnAggiungi" Text="Aggiungi" FontSize="18" BackgroundColor="Green" Clicked="BtnAggiungi_Clicked"/>
+                <Button x:Name="BtnElimina" Text="Elimina" FontSize="18" BackgroundColor="Red" Clicked="BtnElimina_Clicked"/>
+                <Button x:Name="BtnAnnulla" Text="Annulla" FontSize="18" Clicked="BtnAnnulla_Clicked" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCoordinamento.MainPage"
+             Loaded="ContentPage_Loaded">
+
+    <ScrollView>
+        <VerticalStackLayout
+          Spacing="25"
+          Padding="30,0">
+
+            <Label Text="Elenco studenti classe" FontSize="18" HorizontalOptions="Center" />
+
+            <ListView
+                x:Name="LstStudenti" ItemSelected="LstStudenti_ItemSelected" HeightRequest="400">
+
+                <!-- HEADER (mostrato una sola volta) -->
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Matricola" Grid.Column="0" FontAttributes="Bold" FontSize="18"/>
+                        <Label Text="Nome" Grid.Column="1" FontAttributes="Bold" FontSize="18"/>
+                        <Label Text="Cognome" Grid.Column="2" FontAttributes="Bold" FontSize="18"/>
+                    </Grid>
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- DATI -->
+
+                                <Label Grid.Column="0" Text="{Binding Matricola}"  FontSize="16" FontAttributes="Bold" />
+                                <Label Grid.Column="1" Text="{Binding Nome}" FontSize="16"/>
+                                <Label Grid.Column="3" Text="{Binding Cognome}" FontSize="16" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <HorizontalStackLayout Spacing="50">
+                <Button
+                    x:Name="BtnAggiungi"
+                    Text="Aggiungi studente"
+                    Clicked=""
+                    HorizontalOptions="Center" WidthRequest="200"/>
+
+                <Label
+                  x:Name="LblNumeroPromossi"
+                  Text="Numero promossi: 0"
+                  FontSize="16"
+                  FontAttributes="Bold" VerticalOptions="Center"/>
+
+                <Label
+                  x:Name="LblNumeroBocciati"
+                  Text="Numero bocciati: 0"
+                  FontSize="16"
+                  FontAttributes="Bold" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
