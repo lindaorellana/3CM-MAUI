@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AppCoordinamento.Classi
 {
-   internal static class Global
+    internal static class Global
     {
-        public static Studenti Classe =new Studenti();
-        public static int Indiceelezionato = -1;
+        public static Studenti Classe = new Studenti();
+        public static int IndiceSelezionato = -1;
     }
 }
